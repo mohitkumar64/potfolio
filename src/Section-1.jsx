@@ -20,17 +20,17 @@ function Section1() {
             
 
         <motion.section
-            className="flex flex-col items-center justify-center mt-[150px]"
+            className="flex flex-col items-center w-full justify-center mt-[150px]"
           >
         <motion.div
           style={{ opacity, scale }}
           className="flex flex-col items-center"
         >
-          <p className="text-5xl font-bold text-white mb-5">
+          <p className="md:text-5xl text-2xl font-bold text-white md:mb-5">
             Hi, I’m Mohit Kumar
           </p>
 
-          <div className="mt-4">
+          <div className="md:mt-4">
             <LayoutTextFlip />
           </div>
 

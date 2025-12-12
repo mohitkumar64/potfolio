@@ -24,7 +24,7 @@ function HomePage() {
 
   return (
 
-    <div name={"/"} className='relative  bg-black  flex flex-col gap-y-80 '>
+    <div name={"/"} className='relative  bg-black  flex flex-col gap-y-30 md:gap-y-80 '>
       <ProgressBar />
       <Navbar />
       <motion.div style={{y : y1}}> 

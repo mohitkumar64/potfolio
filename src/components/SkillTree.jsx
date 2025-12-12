@@ -10,6 +10,7 @@ const levelVariant = {
 function SkillTree() {
   return (
      <motion.div 
+
       name ={"skills"}
        initial="hidden"
         
@@ -21,7 +22,7 @@ function SkillTree() {
         }
       }}
     
-    className=' relative flex flex-col w-full items-center' >
+    className=' relative flex flex-col w-full items-center scale-23 md:scale-100' >
         
         
         <div className=" relative z-40 node-1 flex justify-center items-center">

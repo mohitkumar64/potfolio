@@ -40,9 +40,9 @@ export default function Navbar() {
   const [active, setActive] = useState("Home");
 
   return (
-    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-200">
+    <nav className="fixed top-6 left-45 md:left-1/2 -translate-x-1/2 z-200">
       <motion.div
-        className="flex items-center gap-6 rounded-full  bg-neutral-900/70 border-white/10  px-8 py-3 backdrop-blur-md border shadow-lg"
+        className="flex items-center md:gap-6 rounded-full  bg-neutral-900/70 border-white/10  md:px-8 md:py-3 backdrop-blur-md border shadow-lg"
         // 
         variants={containerVariants}
         initial="hidden"
@@ -65,7 +65,7 @@ export default function Navbar() {
             variants={linkVariants}
             whileHover={{ scale: 1.05 }}
             onClick={() => setActive(link.name)}
-            className={`text-lg font-medium transition-colors cursor-pointer px-5 ${
+            className={` text-md md:text-lg font-medium transition-colors cursor-pointer px-3 md:px-5 ${
               active === link.name
                 ? "text-white"
                 : "text-neutral-400 hover:text-white"
