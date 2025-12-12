@@ -4,7 +4,7 @@ import { motion , useTransform , useScroll, useMotionValueEvent } from "motion/r
 
 function ProgressBar() {
 const { scrollYProgress}  = useScroll();
-const y2 = useTransform(scrollYProgress , [0,1] , [0,5500]);
+const y2 = useTransform(scrollYProgress , [0,1] , [0,5000]);
 const height = useTransform(scrollYProgress ,[0,1] , [0,400]);
 
   return (

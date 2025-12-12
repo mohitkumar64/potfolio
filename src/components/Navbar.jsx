@@ -39,7 +39,7 @@ export default function Navbar() {
   const [active, setActive] = useState("Home");
 
   return (
-    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
+    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-200">
       <motion.div
         className="flex items-center gap-6 rounded-full  bg-neutral-900/70 border-white/10  px-8 py-3 backdrop-blur-md border shadow-lg"
         // 
