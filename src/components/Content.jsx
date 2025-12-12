@@ -29,6 +29,7 @@ export default function Contact() {
 
   return (
   <motion.div 
+  name ={"contact"}
   className=" flex items-center"
   >
      <motion.div 

@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { motion } from "motion/react";
+import { Link } from "react-scroll";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "Projects", href: "#projects" },
-  { name: "Skills", href: "#skills" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "Projects", href: "projects" },
+  { name: "Skills", href: "skills" },
+  { name: "Contact", href: "contact" },
 ];
 
 const containerVariants = {
@@ -53,22 +54,28 @@ export default function Navbar() {
         }}
       >
         {navLinks.map((link) => (
-          <motion.a
+          <motion.div key={link.name} variants={linkVariants}>
+              <Link
             key={link.name}
-            href={link.href}
+            to={link.href}
+            smooth={true}
+            duration={500}
+            spy={true}
+            offset={-80} // adjust for fixed navbar
             variants={linkVariants}
-            whileHover={{ scale: 1.05 ,
-              
-             }}
+            whileHover={{ scale: 1.05 }}
             onClick={() => setActive(link.name)}
-            className={`text-lg font-medium    transition-colors px-5 ${
+            className={`text-lg font-medium transition-colors cursor-pointer px-5 ${
               active === link.name
                 ? "text-white"
                 : "text-neutral-400 hover:text-white"
             }`}
           >
             {link.name}
-          </motion.a>
+              </Link>
+          </motion.div>
+         
+
         ))}
       </motion.div>
     </nav>

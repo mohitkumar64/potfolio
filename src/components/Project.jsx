@@ -35,6 +35,7 @@ export default function ProjectSection() {
 
   return (
     <motion.div
+      name ={"projects"}
       animate={{ backgroundColor: back[activeIndex].color }}
       transition={{ duration: 0.6 }}
       className="text-white flex flex-col px-20 py-20 gap-20"
@@ -72,9 +73,7 @@ export default function ProjectSection() {
                 animate={{
                   color: activeIndex === i ? "white" : "gray",
                 }}
-                transition={{
-                  duration: 0.4
-                }}
+               
 
                 whileHover={{ color: "white" }}
                 className="w-full text-gray-500"
