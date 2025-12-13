@@ -26,7 +26,7 @@ function Section1() {
           style={{ opacity, scale }}
           className="flex flex-col items-center"
         >
-          <p className="md:text-5xl text-2xl font-bold text-white md:mb-5">
+          <p className="md:text-5xl text-2xl font-bold  bg-linear-to-b from-white from-40% to-zinc-600 bg-clip-text text-transparent  md:mb-5">
             Hi, I’m Mohit Kumar
           </p>
 

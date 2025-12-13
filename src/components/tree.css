@@ -3,6 +3,9 @@
     height: 100px;
     border-radius: 100%;
     background-color: rgb(15, 15, 15);
+    box-shadow:
+    0 4px 14px rgba(37, 99, 235, 0.45),
+    0 0 0 1px rgba(37, 99, 235, 0.6);
     z-index: 100;
     
 }
@@ -12,11 +15,24 @@
     border-radius: 100%;
     background-color: rgb(15, 15, 15);
     z-index: 100;
+    box-shadow:
+    0 4px 14px rgba(37, 99, 235, 0.45),
+    0 0 0 1px rgba(37, 99, 235, 0.6);
     transition:  all 0.3 ease;
     
 }
-
-
+.node:hover{
+    scale: 1.1;
+    box-shadow:
+    0 4px 14px rgba(37, 99, 235, 0.45),
+    0 0 0 1px rgba(37, 99, 235, 0.6);
+}
+.node-1:hover{
+    scale: 1.1;
+    box-shadow:
+    0 4px 14px rgba(37, 99, 235, 0.45),
+    0 0 0 1px rgba(37, 99, 235, 0.6);
+}
 
 .line{
     background-color: white;
@@ -25,6 +41,9 @@
     position: absolute;
     transform-origin: top center;
     stroke-linecap: round;
+   box-shadow:
+    0 0 4px rgba(255,255,255,0.6),
+    0 0 12px rgba(255,255,255,0.25);
     z-index: -1;
   
      
@@ -36,6 +55,9 @@
      z-index: 1;
     position: absolute;
     transform-origin: top center;
+   box-shadow:
+    0 0 4px rgba(255,255,255,0.6),
+    0 0 12px rgba(255,255,255,0.25);
 }
 .line-3{
     background-color: white;
@@ -43,5 +65,8 @@
     height: 160px;
      z-index: 1;
     position: absolute;
+    box-shadow:
+    0 0 4px rgba(255,255,255,0.6),
+    0 0 12px rgba(255,255,255,0.25);
     transform-origin: top center;
 }

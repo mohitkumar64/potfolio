@@ -40,7 +40,12 @@ export default function ProjectSection() {
       transition={{ duration: 0.6 }}
       className="text-white flex flex-col px-20 py-20 gap-20"
     >
-      <h1 className="font-extrabold text-7xl mb-10">Projects</h1>
+      <h1 className="font-extrabold text-7xl leading-[1.5] border  mb-10 text-transparent bg-linear-to-b from-white via-gray-500 to-neutral-600 bg-clip-text [-webkit-text-stroke:2px_rgba(255,255,255,0.35)] ">
+  Projects
+</h1>
+
+
+
 
       <div className="flex px-5 gap-x-10">
         <div className="flex flex-col gap-42 w-1/2">
@@ -86,7 +91,8 @@ export default function ProjectSection() {
                     p.tech.map((v, i) => (
                       <motion.div
                         key={i}
-                        className="bg-gray-600 m-5 w-30 rounded-2xl h-10 text-center font-semibold flex flex-col justify-center items-center"
+                        
+                        className="bg-gray-600 hover:bg-gray-700 m-5 w-30 border-2 shadow-md shadow-gray-600/50 border-gray-800 rounded-2xl h-10 text-center font-semibold flex flex-col justify-center items-center"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
