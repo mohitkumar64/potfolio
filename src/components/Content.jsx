@@ -2,8 +2,15 @@ import { motion } from "motion/react";
 import { useState } from "react";
 import LottieAnimation from "./lottieJson";
 import contactus from "./img/Contactus.json"
+import useMediaQuery from "./hook/MediaQuery"
+
 
 export default function Contact() {
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  console.log(isMobile);
+  
+    
+
   const [form, setForm] = useState({
     email: "",
     message: ""
@@ -30,10 +37,10 @@ export default function Contact() {
   return (
   <motion.div 
   name ={"contact"}
-  className=" flex items-center"
+  className=" flex items-center w-full "
   >
      <motion.div 
-      className="text-white flex-2  px-20 py-20 flex flex-col gap-10"
+      className="text-white flex-2 px-11 md:px-20 py-20 flex flex-col  gap-10"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -45,7 +52,7 @@ export default function Contact() {
 
       <form 
         onSubmit={handleSubmit} 
-        className="flex flex-col gap-8 w-1/2 mt-10"
+        className="flex flex-col gap-8 md:w-1/2 mt-10"
       >
 
         {/* EMAIL */}
@@ -85,9 +92,11 @@ export default function Contact() {
         </motion.button>
       </form>
     </motion.div>
-      <motion.div  className="flex-1 ">
+
+
+    {!isMobile && <motion.div  className="flex-1 ">
           <LottieAnimation  animation={contactus}   />
-      </motion.div>
+      </motion.div>}
   </motion.div> 
    
   );
