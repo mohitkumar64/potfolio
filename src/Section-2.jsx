@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import Navbar from "./components/Navbar";
 import { PixelatedCanvasDemo } from "./components/Pixelated-CanvasDemo";
+import { Link } from "react-scroll";
 
 const pVaraints = {
   "initial" : {
@@ -52,7 +53,7 @@ function Section2() {
             whileHover={{ scale: 0.9, color: "white" }}
            
             className="text-2xl"
-            href=""
+            href="www.linkedin.com/in/mohit-kumar-339a84330"
           >
             <i className="bi bi-linkedin"></i>
           </motion.a>
@@ -60,7 +61,7 @@ function Section2() {
           <motion.a
              whileHover={{ scale: 0.9, color: "white" }}
             className="text-2xl"
-            href=""
+            href="https://github.com/mohitkumar64"
           >
             <i className="bi bi-github"></i>
           </motion.a>
@@ -117,20 +118,29 @@ function Section2() {
         </div>
 
                      <div className="flex gap-4 mt-4">
-                  <motion.a
+                  <motion.div
                       variants={pVaraints}
                     
                     transition = {
                       {
                         duration : 0.8
                       }
-            }
+                       }
                      whileHover={{ scale: 0.97 }}
                      className="md:px-5  px-1 flex justify-center items-center md:py-2 rounded-md bg-white text-black font-semibold text-sm"
-                     href="#projects"
+                     
                   >
-                     View Projects
-                  </motion.a>
+                    <Link
+                      to={"projects"}
+                    
+                       smooth={true}
+                      duration={500}
+                      variants={pVaraints}
+                    >
+                      View Projects
+                    </Link>
+                     
+                  </motion.div>
 
                   <motion.a
 

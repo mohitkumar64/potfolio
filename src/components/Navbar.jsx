@@ -61,7 +61,7 @@ export default function Navbar() {
             smooth={true}
             duration={500}
             spy={true}
-            offset={-80} // adjust for fixed navbar
+            offset={-80} 
             variants={linkVariants}
            
             onClick={() => setActive(link.name)}
