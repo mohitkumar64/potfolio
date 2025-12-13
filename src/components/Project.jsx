@@ -60,10 +60,13 @@ export default function ProjectSection() {
                 key={i}
                 ref={ref}
                 initial={{ opacity: 0, y: 40 }}
+                whileHover={{color:"white"}}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                animate={{ color: activeIndex === i ? "#ffffff" : "#9ca3af" }}
-                className="flex flex-col"
+               
+                className={`flex flex-col transition-colors duration-300 ${
+              activeIndex === i ? "text-white" : "text-gray-400"
+            }`}
               >
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">
                   {p.title}
@@ -89,7 +92,7 @@ export default function ProjectSection() {
                   {p.tech?.map((tech, idx) => (
                     <motion.span
                       key={idx}
-                      className="px-4 py-2 text-xs sm:text-sm hover:bg-gray-700  shadow-md shadow-gray-600/50 border-gray-800   font-semibold bg-neutral-800 border-2 rounded-xl"
+                      className="px-4 py-2 text-xs sm:text-sm transition-all hover:bg-gray-700  shadow-md shadow-gray-600 border-gray-800   font-semibold bg-neutral-800 border-2 rounded-xl"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >

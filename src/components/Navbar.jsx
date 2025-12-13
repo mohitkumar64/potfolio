@@ -54,7 +54,7 @@ export default function Navbar() {
         }}
       >
         {navLinks.map((link) => (
-          <motion.div key={link.name} variants={linkVariants}>
+          <motion.div key={link.name} variants={linkVariants}  whileHover={{ scale: 1.05 }}>
               <Link
             key={link.name}
             to={link.href}
@@ -63,7 +63,7 @@ export default function Navbar() {
             spy={true}
             offset={-80} // adjust for fixed navbar
             variants={linkVariants}
-            whileHover={{ scale: 1.05 }}
+           
             onClick={() => setActive(link.name)}
             className={` text-md md:text-lg font-medium transition-colors cursor-pointer px-3 md:px-5 ${
               active === link.name
