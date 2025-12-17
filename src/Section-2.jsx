@@ -53,7 +53,7 @@ function Section2() {
             whileHover={{ scale: 0.9, color: "white" }}
            
             className="text-2xl"
-            href="www.linkedin.com/in/mohit-kumar-339a84330"
+            href="https://www.linkedin.com/in/mohit-kumar-339a84330/"
           >
             <i className="bi bi-linkedin"></i>
           </motion.a>
